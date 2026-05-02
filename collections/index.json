@@ -1,14 +1,14 @@
 [
   {
-    "id": "nature",
-    "title": "Nature Collection",
-    "description": "A collection of nature photos.",
+    "id": "Flowers",
+    "title": "A Collection of Flowers",
+    "description": "A collection of flower photos.",
     "images": [
-      "collections/nature/Park 1-1.jpg",
-      "collections/nature/Park 2-1.jpg",
-      "collections/nature/Park 3-1.jpg",
-      "collections/nature/Park2.JPG"
+      "collections/Flowers/Park 1-1.jpg",
+      "collections/Flowers/Park 2-1.jpg",
+      "collections/Flowers/Park 3-1.jpg",
+      "collections/Flowers/Park2.JPG"
     ],
-    "thumbnail": "collections/nature/Park 1-1.jpg"
+    "thumbnail": "collections/Flowers/Park 1-1.jpg"
   }
 ]

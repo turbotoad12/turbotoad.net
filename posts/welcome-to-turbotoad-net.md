@@ -1,7 +1,7 @@
 ---
 title: Welcome to TurboToad.net
 date: May 2, 2026
-excerpt: Combining retro style with modern functionality to create something unique.
+excerpt: Welcome to my site.
 ---
 
 # Welcome to TurboToad.net
