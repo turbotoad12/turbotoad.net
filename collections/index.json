@@ -1,11 +1,14 @@
 [
   {
-    "id": "sample-collection",
-    "title": "Sample Collection",
-    "description": "A sample photo collection - replace with your images",
+    "id": "nature",
+    "title": "Nature Collection",
+    "description": "A collection of nature photos.",
     "images": [
-      "collections/sample-collection/photo1.JPG"
+      "collections/nature/Park 1-1.jpg",
+      "collections/nature/Park 2-1.jpg",
+      "collections/nature/Park 3-1.jpg",
+      "collections/nature/Park2.JPG"
     ],
-    "thumbnail": "collections/sample-collection/photo1.JPG"
+    "thumbnail": "collections/nature/Park 1-1.jpg"
   }
 ]

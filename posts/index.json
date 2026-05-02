@@ -1,9 +1,9 @@
 [
   {
-    "id": "building-for-the-future",
-    "title": "Building for the Future",
-    "date": "April 25, 2026",
+    "id": "welcome-to-turbotoad-net",
+    "title": "Welcome to TurboToad.net",
+    "date": "May 2, 2026",
     "excerpt": "Combining retro style with modern functionality to create something unique.",
-    "content": "Static site generation isn't new—but it's better than ever.\n\nHere's our approach:\n\n1. **Write posts in Markdown** — clean, version-controlled content\n2. **Run a Python script** — generates a JSON index\n3. **Load dynamically** — blog page fetches and renders posts\n4. **No backend needed** — pure HTML, CSS, and JavaScript\n\nThis gives us:\n- The speed of static sites\n- The flexibility of dynamic content\n- No database overhead\n- Easy to deploy anywhere\n\nThe future is yesterday. Sometimes."
+    "content": "# Welcome to TurboToad.net\n\nMy name is TurboToad12, I like photography and computers. I hope to use this site to showcase my projects and photo collections."
   }
 ]
