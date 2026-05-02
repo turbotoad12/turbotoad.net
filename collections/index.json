@@ -12,6 +12,17 @@
     "thumbnail": "collections/Flowers/Park 1-1.jpg"
   },
   {
+    "id": "Nature",
+    "title": "Nature Collection",
+    "description": "A collection of nature photos.",
+    "images": [
+      "collections/Nature/Outdoor Photos 2026-02-13 014.JPG",
+      "collections/Nature/Outdoor Photos 2026-02-13 015.JPG",
+      "collections/Nature/Outdoor Photos 2026-02-13 016.JPG"
+    ],
+    "thumbnail": "collections/Nature/Outdoor Photos 2026-02-13 014.JPG"
+  },
+  {
     "id": "Water",
     "title": "Ocean's Gallery",
     "description": "A collection of ocean photos.",

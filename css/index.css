@@ -9,11 +9,15 @@
 }
 
 *{box-sizing:border-box}
+html{
+	background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+	background-attachment: fixed;
+}
 html,body{height:100%;margin:0}
 body{
 	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	color:#ddd;
-	background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+	background:transparent;
 }
 
 .container{max-width:var(--max-width);margin:0 auto;padding:0 18px}
@@ -38,8 +42,8 @@ body{
 .main-nav li{opacity:.95}
 
 /* Main layout */
-.site-main{padding:24px 0}
-.hero{height:360px;background:#000;border-radius:2px;margin-bottom:18px;box-shadow: inset 0 -80px 80px rgba(0,0,0,0.6)}
+.site-main{padding:24px 0;padding-bottom:100px}
+.hero{height:360px;background:#000;border-radius:2px;margin-bottom:18px;box-shadow:none}
 
 .content-row{display:flex;gap:24px;align-items:flex-start;margin-bottom:40px}
 .featured{flex:1;}
@@ -135,7 +139,7 @@ body{
 }
 
 /* Footer */
-.site-footer{margin-top:30px;padding:26px 0;color:var(--muted)}
+.site-footer{margin-top:30px;padding:20px 0;color:var(--muted);font-size:14px}
 .footer-inner{display:flex;justify-content:space-between;align-items:center}
 
 /* Responsive */
