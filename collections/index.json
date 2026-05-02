@@ -10,5 +10,16 @@
       "collections/Flowers/Park2.JPG"
     ],
     "thumbnail": "collections/Flowers/Park 1-1.jpg"
+  },
+  {
+    "id": "Water",
+    "title": "Ocean's Gallery",
+    "description": "A collection of ocean photos.",
+    "images": [
+      "collections/Water/Pool 1-1.jpg",
+      "collections/Water/Outdoor Photos 2026-02-14 002.JPG",
+      "collections/Water/Outdoor Photos 2026-02-14 004.JPG"
+    ],
+    "thumbnail": "collections/Water/Pool 1-1.jpg"
   }
 ]
