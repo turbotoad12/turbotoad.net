@@ -3,23 +3,31 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>TurboToad.net</title>
+    <title>Gallery - TurboToad.net</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="description" content="" />
+    <meta name="description" content="Photo gallery" />
     <link rel="icon" href="favicon.png">
     <link rel="stylesheet" href="css/index.css" />
     <script type="module">
-        import { loadPosts } from './js/blog.js';
-        import { renderLatestNews } from './js/blog-home.js';
-        import { loadCollections, renderCollectionsGrid } from './js/collections.js';
-        import { initHeroRotation } from './js/hero.js';
+        import { loadCollections, getCollections } from './js/collections.js';
+        import { renderCollectionGallery } from './js/gallery.js';
         
         async function init() {
-            await loadPosts();
             await loadCollections();
-            initHeroRotation();
-            renderLatestNews();
-            renderCollectionsGrid(document.getElementById('collections-container'));
+            
+            // Get collection ID from URL
+            const params = new URLSearchParams(window.location.search);
+            const collectionId = params.get('collection');
+            
+            const collections = getCollections();
+            const collection = collections.find(c => c.id === collectionId);
+            
+            if (!collection) {
+                document.getElementById('gallery-container').innerHTML = '<p>Collection not found.</p>';
+                return;
+            }
+            
+            renderCollectionGallery(document.getElementById('gallery-container'), collection);
         }
         
         // Initialize when DOM is ready
@@ -50,26 +58,14 @@
         </nav>
     </header>
 
-    <main class="site-main container">
-        <section class="hero" title="Click to view full gallery">
-            <!-- Photo from collections rotates here -->
-        </section>
-
-        <div class="content-row">
-            <section class="featured" id="collections-container">
-                <!-- Photo collections render here -->
-            </section>
-
-            <aside class="sidebar" id="sidebar-content">
-                <!-- Blog posts will render here -->
-            </aside>
-        </div>
+    <main class="site-main container" id="gallery-container">
+        <!-- Gallery renders here -->
     </main>
 
     <footer class="site-footer">
         <div class="container footer-inner">
             <div class="footer-links">Careers | Contact Us | Terms of Use</div>
-            <div class="copyright">© 2013 Canon U.S.A., Inc. All Rights Reserved.</div>
+            <div class="copyright">© 2026 Turbotoad. All Rights Reserved.</div>
         </div>
     </footer>
 </body>

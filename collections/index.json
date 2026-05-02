@@ -1,0 +1,11 @@
+[
+  {
+    "id": "sample-collection",
+    "title": "Sample Collection",
+    "description": "A sample photo collection - replace with your images",
+    "images": [
+      "collections/sample-collection/photo1.JPG"
+    ],
+    "thumbnail": "collections/sample-collection/photo1.JPG"
+  }
+]
