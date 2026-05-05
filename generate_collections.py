@@ -74,3 +74,9 @@ def generate_collections_index():
 
 if __name__ == '__main__':
     generate_collections_index()
+    # Update sitemap (if helper available)
+    try:
+        from generate_sitemap import generate_sitemap
+        generate_sitemap()
+    except Exception:
+        pass

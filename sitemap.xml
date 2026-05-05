@@ -1,54 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Main pages -->
   <url>
     <loc>https://turbotoad.net/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
   <url>
     <loc>https://turbotoad.net/blog.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
-  <!-- Blog posts -->
+  <url>
+    <loc>https://turbotoad.net/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
   <url>
     <loc>https://turbotoad.net/blog.html?post=welcome-to-turbotoad-net</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
-  <!-- Collections/Gallery -->
+  <url>
+    <loc>https://turbotoad.net/blog.html?post=my-opinion-on-the-t4i</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://turbotoad.net/gallery.html?collection=Animals</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
     <loc>https://turbotoad.net/gallery.html?collection=Flowers</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
     <loc>https://turbotoad.net/gallery.html?collection=Nature</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
   <url>
     <loc>https://turbotoad.net/gallery.html?collection=Water</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url>
-  
-  <!-- About page (special post) -->
-  <url>
-    <loc>https://turbotoad.net/blog.html?post=welcome-to-turbotoad-net</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
   </url>
 </urlset>
