@@ -39,10 +39,10 @@
     "description": "A collection of ocean photos.",
     "images": [
       "collections/Water/Pool 1-1.jpg",
-      "collections/Water/2.JPG",
+      "collections/Water/*2.JPG",
       "collections/Water/Outdoor Photos 2026-02-14 002.JPG",
       "collections/Water/Outdoor Photos 2026-02-14 004.JPG"
     ],
-    "thumbnail": "collections/Water/Pool 1-1.jpg"
+    "thumbnail": "collections/Water/*2.JPG"
   }
 ]

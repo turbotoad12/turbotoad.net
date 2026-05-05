@@ -43,12 +43,25 @@ def generate_collections_index():
         jpg_files += sorted([f.name for f in collection_folder.glob('*.JPEG')])
         
         if jpg_files:
+            # Check if any file has * to mark it as thumbnail
+            thumbnail_file = None
+            
+            for jpg_file in jpg_files:
+                if '*' in jpg_file:
+                    # This file is marked as thumbnail, keep the * in the path
+                    thumbnail_file = jpg_file
+                    break
+            
+            # If no file was marked with *, use the first one
+            if thumbnail_file is None:
+                thumbnail_file = jpg_files[0]
+            
             collection = {
                 'id': collection_name,
                 'title': meta.get('title', collection_name.replace('-', ' ').title()),
                 'description': meta.get('description', ''),
                 'images': [f'collections/{collection_name}/{img}' for img in jpg_files],
-                'thumbnail': f'collections/{collection_name}/{jpg_files[0]}'
+                'thumbnail': f'collections/{collection_name}/{thumbnail_file}'
             }
             collections.append(collection)
     
