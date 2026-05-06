@@ -5,6 +5,9 @@
 // Header component
 export function HeaderComponent() {
     return `
+    <div class="announcement-bar" role="status" aria-live="polite">
+        This website is under construction.
+    </div>
     <header class="site-header">
         <div class="topbar container">
             <div class="logo"><a href="/">turbotoad.net</a></div>
