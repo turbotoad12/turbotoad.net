@@ -27,6 +27,7 @@ fi
 echo "Restarting service..."
 if ! sudo systemctl restart "$SERVICE_NAME"; then
   echo "Error: failed to restart ${SERVICE_NAME}." >&2
+  sudo systemctl --no-pager status "$SERVICE_NAME" || true
   exit 1
 fi
 

@@ -44,6 +44,8 @@ ExecStart=${NODE_BIN} ${START_CMD}
 Restart=always
 RestartSec=5
 Environment=NODE_ENV=production
+PrivateTmp=true
+NoNewPrivileges=true
 StandardOutput=journal
 StandardError=journal
 
