@@ -13,9 +13,8 @@ if ! git pull --ff-only; then
 fi
 
 echo "Installing dependencies..."
-npm install
+npm ci
 echo "Building Nuxt application..."
 npm run build
 
-sudo systemctl daemon-reload
 sudo systemctl restart "$SERVICE_NAME"
