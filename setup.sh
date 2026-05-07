@@ -5,7 +5,7 @@ SERVICE_NAME="turbotoad-net.service"
 APP_USER="webuser"
 APP_DIR="/home/webuser/turbotoad.net"
 NODE_BIN="$(command -v node)"
-START_CMD="/home/webuser/turbotoad.net/.output/server/index.mjs"
+START_CMD="${APP_DIR}/.output/server/index.mjs"
 
 if [[ -z "${NODE_BIN}" ]]; then
   echo "Error: node binary not found in PATH." >&2
@@ -23,6 +23,11 @@ fi
 echo "Building Nuxt application..."
 if ! npm run build; then
   echo "Error: failed to build Nuxt application." >&2
+  exit 1
+fi
+
+if [[ ! -f "${START_CMD}" ]]; then
+  echo "Error: expected server entrypoint not found at ${START_CMD}." >&2
   exit 1
 fi
 

@@ -30,4 +30,9 @@ if ! sudo systemctl restart "$SERVICE_NAME"; then
   exit 1
 fi
 
+if ! sudo systemctl is-active --quiet "$SERVICE_NAME"; then
+  echo "Error: ${SERVICE_NAME} is not active after restart." >&2
+  exit 1
+fi
+
 echo "Update completed successfully."
