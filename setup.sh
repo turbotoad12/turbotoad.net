@@ -28,7 +28,7 @@ After=network.target
 Type=simple
 User=${APP_USER}
 WorkingDirectory=${APP_DIR}
-ExecStart=${NODE_BIN} ${START_CMD}
+ExecStart=${NODE_BIN} ${APP_DIR}/${START_CMD}
 Restart=always
 RestartSec=5
 Environment=NODE_ENV=production

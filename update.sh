@@ -17,4 +17,8 @@ npm ci
 echo "Building Nuxt application..."
 npm run build
 
-sudo systemctl restart "$SERVICE_NAME"
+echo "Restarting service..."
+if ! sudo systemctl restart "$SERVICE_NAME"; then
+  echo "Error: failed to restart ${SERVICE_NAME}." >&2
+  exit 1
+fi
