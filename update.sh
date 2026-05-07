@@ -8,7 +8,7 @@ cd "$APP_DIR"
 
 echo "Pulling latest changes..."
 if ! git pull --ff-only; then
-  echo "Error: git pull failed. Resolve merge state manually and retry." >&2
+  echo "Error: git pull failed. Check local changes, auth/network, and fast-forward state." >&2
   exit 1
 fi
 
