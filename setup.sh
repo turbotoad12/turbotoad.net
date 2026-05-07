@@ -12,7 +12,10 @@ if [[ -z "${NODE_BIN}" ]]; then
   exit 1
 fi
 
-cd "$APP_DIR"
+if ! cd "$APP_DIR"; then
+  echo "Error: failed to change directory to ${APP_DIR}." >&2
+  exit 1
+fi
 
 echo "Installing dependencies..."
 if ! npm ci; then

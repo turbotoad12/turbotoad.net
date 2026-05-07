@@ -4,7 +4,10 @@ set -euo pipefail
 SERVICE_NAME="turbotoad-net.service"
 APP_DIR="/home/webuser/turbotoad.net"
 
-cd "$APP_DIR"
+if ! cd "$APP_DIR"; then
+  echo "Error: failed to change directory to ${APP_DIR}. Ensure it exists and is accessible." >&2
+  exit 1
+fi
 
 echo "Pulling latest changes..."
 if ! git pull --ff-only; then
@@ -33,6 +36,7 @@ fi
 
 if ! sudo systemctl is-active --quiet "$SERVICE_NAME"; then
   echo "Error: ${SERVICE_NAME} is not active after restart." >&2
+  sudo systemctl --no-pager status "$SERVICE_NAME" || true
   exit 1
 fi
 
