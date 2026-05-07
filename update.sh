@@ -29,3 +29,5 @@ if ! sudo systemctl restart "$SERVICE_NAME"; then
   echo "Error: failed to restart ${SERVICE_NAME}." >&2
   exit 1
 fi
+
+echo "Update completed successfully."

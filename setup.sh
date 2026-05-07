@@ -26,7 +26,7 @@ if ! npm run build; then
   exit 1
 fi
 
-sudo tee "/etc/systemd/system/${SERVICE_NAME}" > /dev/null <<SERVICE
+if ! sudo tee "/etc/systemd/system/${SERVICE_NAME}" > /dev/null <<SERVICE
 [Unit]
 Description=Nuxt service for turbotoad.net
 After=network.target
@@ -45,6 +45,10 @@ StandardError=journal
 [Install]
 WantedBy=multi-user.target
 SERVICE
+then
+  echo "Error: failed to write /etc/systemd/system/${SERVICE_NAME}." >&2
+  exit 1
+fi
 
 if ! sudo systemctl daemon-reload; then
   echo "Error: failed to reload systemd daemon." >&2
@@ -55,3 +59,5 @@ if ! sudo systemctl enable --now "$SERVICE_NAME"; then
   echo "Error: failed to enable/start ${SERVICE_NAME}." >&2
   exit 1
 fi
+
+echo "Setup completed successfully. ${SERVICE_NAME} is enabled and running."
