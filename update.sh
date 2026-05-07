@@ -13,9 +13,16 @@ if ! git pull --ff-only; then
 fi
 
 echo "Installing dependencies..."
-npm ci
+if ! npm ci; then
+  echo "Error: failed to install dependencies." >&2
+  exit 1
+fi
+
 echo "Building Nuxt application..."
-npm run build
+if ! npm run build; then
+  echo "Error: failed to build Nuxt application." >&2
+  exit 1
+fi
 
 echo "Restarting service..."
 if ! sudo systemctl restart "$SERVICE_NAME"; then

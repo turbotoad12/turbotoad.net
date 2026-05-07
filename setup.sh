@@ -15,9 +15,16 @@ fi
 cd "$APP_DIR"
 
 echo "Installing dependencies..."
-npm ci
+if ! npm ci; then
+  echo "Error: failed to install dependencies." >&2
+  exit 1
+fi
+
 echo "Building Nuxt application..."
-npm run build
+if ! npm run build; then
+  echo "Error: failed to build Nuxt application." >&2
+  exit 1
+fi
 
 sudo tee "/etc/systemd/system/${SERVICE_NAME}" > /dev/null <<SERVICE
 [Unit]
@@ -39,5 +46,12 @@ StandardError=journal
 WantedBy=multi-user.target
 SERVICE
 
-sudo systemctl daemon-reload
-sudo systemctl enable --now "$SERVICE_NAME"
+if ! sudo systemctl daemon-reload; then
+  echo "Error: failed to reload systemd daemon." >&2
+  exit 1
+fi
+
+if ! sudo systemctl enable --now "$SERVICE_NAME"; then
+  echo "Error: failed to enable/start ${SERVICE_NAME}." >&2
+  exit 1
+fi
