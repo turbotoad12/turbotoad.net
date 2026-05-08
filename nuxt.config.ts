@@ -2,5 +2,9 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/sitemap', 'nuxt-link-checker']
+  modules: [
+    '@nuxtjs/sitemap',
+    'nuxt-link-checker',
+    '@nuxtjs/tailwindcss',
+  ],
 })
